@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康界</title>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=OvoiFqh68Yb2h3TmQ0Tzfa4mXTYTiHem"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        var fun = function (doc, win) {
+            var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                //这里是假设在750px宽度设计稿的情况下，1rem = 100px；
+                //可以根据实际需要修改
+                docEl.style.fontSize = 25 * (clientWidth / 1920) + 'px';
+            };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        }
+        fun(document, window)
+    </script>
+</body>
+</html>

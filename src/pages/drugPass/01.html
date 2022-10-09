@@ -1,0 +1,53 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <style type="text/css">
+    body{
+        font-size:17px;    
+    }
+    .current{
+        background:red;    
+    }
+    #container ul
+    {
+        list-style-type:none;
+    }
+    #container ul li
+    {
+        float:left;
+        margin-right:3px;
+    }
+    #container ul li a{
+    text-decoration:none;
+    color:#000;
+     
+    }
+    </style>
+    </head>
+    <body>
+    <div id="container">
+    <ul id="Menu">
+    <li><a href="javascript:" onclick="change_bg(this)" class="current">Menu1</a></li>
+    <li><a href="javascript:" onclick="change_bg(this)">Menu2</a></li>
+    <li><a href="javascript:" onclick="change_bg(this)">Menu3</a></li>
+    <li><a href="javascript:" onclick="change_bg(this)">Menu4</a></li>
+    <li><a href="javascript:" onclick="change_bg(this)">Menu5</a></li>
+    </ul>
+
+    
+    <script type="text/javascript">
+        function change_bg(obj)
+        {
+            console.log(obj)
+            var a=document.getElementById("Menu").getElementsByTagName("a");
+            for(var i=0;i<a.length;i++)
+            {
+                a[i].className="";
+            }
+            obj.className="current";
+        }
+        
+        </script>
+    </div>
+    </body>
+    </html>

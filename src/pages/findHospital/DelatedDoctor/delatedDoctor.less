@@ -1,0 +1,358 @@
+@import '.././../../static/css/common.less';
+
+.delatedDoctor {
+    padding: 3rem 250px;
+
+    // 医生介绍
+    .introduce {
+        border: 1px solid @border-color;
+
+        // 标签页靠左
+        .ant-tabs-nav-scroll {
+            text-align: left;
+        }
+
+        // 标签页内容上边框设置为0
+        .ant-tabs-top-content {
+            margin-top: -20px;
+        }
+
+        .tab-right {
+            color: @font-color;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        // 概览
+        .overview {
+            display: flex;
+
+            // 医生个人介绍
+            .doctor {
+                padding: 15px 0;
+                width: 65%;
+                border-right: 1px solid @border-color;
+
+                .ant-tabs-nav-animated {
+                    font-size: 0.7rem;
+                }
+
+                .doctor-introduction {
+                    display: flex;
+                    // border-bottom: 1px solid @border-color;
+                    padding: 20px;
+
+                    img {
+                        width: 18%;
+                    }
+
+                    .personal {
+                        margin-left: 15px;
+                        font-size: 0.7rem;
+
+                        .span1 {
+                            font-size: 1.2rem;
+                            color: black;
+                            font-weight: bold;
+                            margin-right: 20px;
+                        }
+                        .span2 {
+                            color: @link-color;
+                            border: 1px solid @link-color;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            padding: 0 2px;
+                        }
+                        span {
+                            color: @link-color;
+                            cursor: pointer;
+                        }
+
+                        // 出诊地点
+                        .visiting-location {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                // 总访问
+                .total-visits {
+                    height: 30px;
+                    display: flex;
+                    justify-content: space-around;
+                }
+                
+            }
+            // 综合评分
+            .overall-rating {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+
+                .overall-rating-header {
+                    color: @link-color;
+                    padding: 20px 15px;
+                    font-size: 0.7rem;
+                }
+                // 评分
+                .score {
+                    font-size: 16px;
+                    padding: 15px;
+                    
+                    .score1, .score2, .score3, .score4 {
+                        overflow: hidden;
+                        line-height: 15px;
+                        margin-top: 15px;
+
+                        .score-name {
+                            width: 80px;
+                        }
+
+                        #rate1 {
+                            width: 180px;
+                            height: 15px;
+                            border-radius: 20px;
+                            margin: 0 15px;
+                            background: @border-color;
+                        }
+                        #rate2 {
+                            width: 180px;
+                            height: 15px;
+                            border-radius: 20px;
+                            margin: 0 15px;
+                            background: linear-gradient(to right, rgb(241, 180, 9), rgb(241, 245, 7));
+                        }
+
+                        div {
+                            float: left;
+                        }
+
+                        span {
+                            color: @link-color;
+                            font-size: 14px;
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 出诊时间
+    .content {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .content-left {
+            width: 80%;
+
+            .information {
+                display: flex;
+                justify-content: space-between;
+
+                // 表格
+                .information-table {
+                    width: 68%;
+                    margin-top: 2%;
+                    padding-right: 10px;
+
+                    .information-table-header {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .span1 {
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        .span2 {
+                            color: @font-color;
+                            font-size: 14px;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    table {
+                        margin-top: 10px;
+                        
+                        tr th {
+                            text-align: center;
+                        }
+                        tr td:first-child {
+                            width: 5%;
+                        }
+                        tr td {
+                            width: 10%;
+                            height: 40px;
+                        }
+                        tr td:nth-child(3) {
+                            text-align: center;
+                            font-size: 12px;
+                            width: 16%;
+                            padding: 10px 0;
+                        }
+                        .btn {
+                            width: 60px;
+                            color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                // 联系方式
+                .contact-information {
+                    width: 19%;
+                    height: 100%;
+                    margin-right: 8%;
+
+                    .connect {
+                        border: 1px solid rgb(138, 133, 133);
+                        border-radius: 6px;
+                        padding: 10px;
+
+                        .connect-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+
+                            .connect-item-img {
+                                text-align: center;
+                                font-size: 14px;
+                            }
+
+                            img {
+                                width: 40%;
+                            }
+                        }
+                        // 更改分割线默认外边距
+                        .ant-divider-horizontal {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+
+            // 回复
+            .reply {
+                display: flex;
+                justify-content: space-between;
+                margin: 35px 0 20px 0;
+                width: 92%;
+            }
+            // 回复内容
+            .reply-content {
+                border: 1px solid @border-color;
+                padding: 30px 40px;
+                width: 92%;
+
+                .filter {
+                    overflow: hidden;
+
+                    ul {
+                        overflow: hidden;
+                        padding: 0;
+                    }
+
+                    ul li {
+                        border: 1px solid @link-color;
+                        color: @link-color;
+                        border-radius: 5px;
+                        padding: 0 5px;
+                        margin: 10px 10px 10px 0;
+                        float: left;
+                        font-size: 14px;
+                        list-style: none;
+                        cursor: pointer;
+                    }
+                    ul li:last-child {
+                        border: 0px solid;
+                    }
+                    .current {
+                        background-color: @link-color;
+                        color: #fff;
+                    }
+                }
+
+                // 评论
+                .comment {
+                    margin-top: 10px;
+                    font-size: 14px;
+
+                    .nickName {
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                    div {
+                        margin-top: 5px;
+                    }
+
+                    span {
+                        color: @link-color;
+                        cursor: pointer;
+                        margin-left: 20px;
+                    }
+                    .driver {
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+
+        // 同科医生
+        .content-right {
+            width: 25%;
+            
+            .fellow-doctor {
+                border: 1px solid @border-color;
+                padding: 15px 8px;
+                font-size: 12px;
+
+                .doctor-item1 {
+                    display: flex;
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                    }
+
+                    span {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    .doctor-text {
+                        margin-left: 10px;
+                        div {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                .doctor-item2 {
+                    margin: 10px 0;
+                }
+                .doctor-item3 {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .btn1 {
+                        color: @link-color;
+                        border: 1px solid @link-color;
+                    }
+                }
+
+                // 同科医生底部
+                .docter-footer {
+                    font-size: 12px;
+                    color: @link-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

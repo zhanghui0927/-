@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+<style>
+*{margin: 0;padding: 0;}
+.change{background-color: #ff6637;float:left;width: 120px;height: 50px;;line-height: 50px;text-align: center;color: #fff;margin-right: 20px;}
+.type{float:left;width: 120px;height: 50px;;line-height: 50px;text-align: center;color: #fff;margin-right: 20px;background-color: #2b2b2b;}
+</style>
+</head>
+
+<body>
+
+<div id="box" style="width: 100%;height:50px;background:#2b2b2b;"></div>
+
+<script type="text/babel">
+class Nav extends React.Component {
+    constructor(props){
+    super(props);
+    this.state={currentIndex:0};
+}
+setCurrentIndex=(event)=>{
+    this.setState({
+    //parseIndex()有两个参数，第二个参数表示被解析值的进制，并返回对应的十进制数
+    //event.currentTarget.getAttribute('index')，通过事件获取当前的序列号并将之转换为number
+        currentIndex: parseInt(event.currentTarget.getAttribute('index'), 10)
+    })
+}
+render(){
+let content=["首页","关于我们","客户案例","新闻资讯","我们的团队","联系我们"];
+let newContent=[];
+for(let i = 0; i < content.length; i++) {
+// key属性标识不同的元素，在元素不确定的情况下减少性能开销
+//react在比较元素子元素是否相同的时候并不会精确查找元素具体的位置变动，只会在查到到不同之后对之后所有的元素全部执行一次dom更新操作。
+//tree1
+//<ul>
+//<li key="1">1</li>
+//<li key="2">2</li>
+//</ul>
+//tree2
+//<ul>
+//<li key="1">1</li>
+//<li key="3">3</li>
+//<li key="2">2</li>
+//</ul>
+//对于上述插入更新情况，React不会直接插入而是会移除第二个子元素再添加剩余元素但是如果加上key属性标识，会直接进行insert操作
+newContent.push(
+    <div key={i} className={this.state.currentIndex === i ? 'change' : 'type'}        //判断当前更新的序列号是否相同，相同就更换className
+        index={i} onClick={this.setCurrentIndex} >
+        {content[i]}
+    </div>);
+}
+return(
+<div style={{width:"1200px",height:"50px",margin:"auto"}}>{newContent}</div>
+)
+}
+}
+ReactDOM.render(
+<Nav />,
+document.getElementById('box')
+);
+</script>
+
+</body>
+
+</html>

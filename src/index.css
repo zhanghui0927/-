@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /* min-width: 1366px;
+    min-height: 657px; */
+    /* antd 默认字体大小为14px，强制修改为16px */
+    /* font-size: 16px !important; */
+    font-size: 16px;
+}
+/* body { */
+    /* antd 默认字体大小为14px，强制修改为16px */
+    /* font-size: 16px !important; */
+/* } */

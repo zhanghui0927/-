@@ -1,0 +1,174 @@
+@import '../../../static/css/common.less';
+
+.relatedHospitalDetail {
+    padding: 3rem 250px;
+
+    .hospital-introduction {
+        border: 1px solid @border-color;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        height: 390px;
+
+        .left {
+            display: flex;
+            padding: 10px;
+            width: 67%;
+            border-right: 1px solid @border-color;
+
+            .img {
+                width: 28%;
+                height: 63%;
+            }
+            .text{
+                font-size: 14px;
+                margin-left: 20px;
+
+                div {
+                    margin: 13px 0;
+                    font-size: 0.65rem
+                }
+
+                .text-1 {
+                    overflow: hidden;
+
+                    .name {
+                        font-weight: bold;
+                        font-size: 20px;
+                        float: left;
+                    }
+
+                    #span {
+                        height: 26px;
+                        display: block;
+                        float: left;
+                        margin-left: 5px;
+                        border-radius: 5px;
+                        width: 32px;
+                        text-align: center;
+                        line-height: 26px;
+                    }
+
+                    .spanType1 {
+                        color: #fff;
+                        background-color: rgb(228, 160, 82);
+                        
+                    }
+                    .spanType2 {
+                        color: #fff;
+                        background-color: @link-color;
+                    }
+                }
+
+                // 蓝色文字
+                .link {
+                    color: @link-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        // 相关排名
+        .right {
+            width: 27%;
+            border: 1px solid @border-color;
+            padding: 10px;
+
+            .content {
+                margin: 0 auto;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+                .ranking {
+                    font-size: 0.65rem;
+                    background-color: @background-color;
+                    padding: 10px 5px;
+
+                    span {
+                        color: red;
+                    }
+                    // 展开更多
+                    .expand-more {
+                        text-align: center;
+                        margin-top: 15px;
+                    }
+                    div {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 咨询和地图
+    .consult{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        .consult-text {
+            width: 26%;
+
+            .consult-text-item{
+                border: 1px solid @border-color;
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 5px;
+                position: relative;
+                width: 18rem;
+                height: 6rem;
+                margin-top: 15%;
+
+                img {
+                    width: 25%;
+                    height: 100%;
+                }
+
+                .consult-text {
+                    width: 70%;
+
+                    div {
+                        margin-bottom: 5px;
+                    }
+
+                    .consult-text1 {
+                        font-size: 0.8rem;
+                        color: black;
+                        font-size: 18px;
+                    }
+                    .consult-text2 {
+                        font-size: 0.65rem;
+                        color: black;
+                    }
+                    .consult-text3 {
+                        font-size: 0.65rem;
+                        color: @link-color;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                }
+                // 右上角文字
+                .top-right {
+                    color: red;
+                    font-size: 0.65rem;
+                    border: 1px solid red;
+                    position: absolute;
+                    right: 2%;
+                    top: 6%;
+                }
+            }
+        }
+
+        // 地图
+        .map {
+            width: 50%;
+
+            #container {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

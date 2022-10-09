@@ -1,0 +1,311 @@
+@import '../../static/css/common.less';
+
+.meeting {
+
+    .top-img {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #fff;
+        // background-size: 100% 100%;
+    }
+
+    .content {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .line {
+            display: flex;
+            height: 180px;
+            padding: 20px 0;
+            width: 80%;
+
+            .line-left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 35%;
+                
+                
+                .itemImg {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+                img {
+                    // background-size: 100% 100%;
+                    height: 100%;
+                }
+
+                .nameTime {
+                    width: 90px;
+
+
+                    .left-name {
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    .left-time {
+                        font-size: 12px;
+                        color: #b4aeae;
+                    }
+                }
+
+                .dividing {
+
+                    .dividing1 {
+                        width: 3px;
+                        height: 80px;
+                        border-radius: 2px;
+                        background: rgb(216, 210, 210);
+                        margin: 0 auto;
+                    }
+                    .dividing2 {
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid rgb(216, 210, 210);
+                        margin: 3px 0;
+                    }
+                }
+            }
+            .line-right {
+                width: 53%;
+                margin-left: 25px;
+                display: flex;
+                flex-direction: row;
+                margin-left: 5%;
+
+                .text {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10px;
+
+                    .right1 {
+                        font-weight: bold;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                    .right2 {
+                        font-size: 14px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 首页
+.index {
+    position: relative;
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+// 会议简介
+#conferenceIntroduction {
+    background-color: #e4dadc;
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+
+    .content {
+        width: 72%;
+        top: 4%;
+        left: 15%;
+        position: absolute;
+
+        p {
+            text-indent: 35px;
+            font-size: 0.8rem;
+            margin-left: 5%;
+        }
+    }
+    .content div:first-child {
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    .content div:nth-child(2) {
+        margin-bottom: 3rem;
+    }
+}
+
+// 会议日程
+#meetSchedule {
+    background-color: #e4dadc;
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+    
+    .content {
+        width: 80%;
+        top: 4%;
+        left: 15%;
+        position: absolute;
+
+        .chinese-name {
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+        .english-name {
+            margin-bottom: 20px;
+        }
+
+        .schedule {
+            padding: 10px 20px;
+            background-color: #ad9095;
+            width: 84%;
+            margin: 2.5rem 0 0 5rem;
+
+            
+            ul {
+                overflow: hidden;
+                padding: 0;
+            }
+
+            ul li {
+                float: left;
+                list-style: none;
+                margin-right: 50px;
+                font-size: 1.2rem;
+            }
+            ul li:first-child {
+                font-weight: bold;
+            }
+            .divider {
+                background-color: @font-color;
+                margin: 10px 0;
+            }
+            .meeting-name {
+
+                span {
+                    background-color: #fff;
+                    color: black;
+                    border-radius: 8px;
+                    padding: 2px 8px;
+                    margin-right: 30px;
+                }
+            }
+            .meeting-name span:first-child{
+                background-color: #77464e;
+                color: #fff;
+                border-radius: 8px;
+                padding: 2px 8px;
+            }
+            .meeting-details {
+                display: flex;
+
+                .meeting-details-left {
+                    width: 50%;
+
+                    .item {
+                        margin-top: 10px;
+                    }
+                    .yuan {
+                        display: inline-block;
+                        background-color: @font-color;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        margin-right: 8px
+                    }
+                    .time {
+                        margin-left: 23px;
+                        color: black;
+                        font-size: 1.2rem;
+                    }
+                    .details-content {
+                        display: flex;
+                        align-items: center;
+                        color: #77464e;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 会议嘉宾
+#conferenceGuests {
+    background-color: #e4dadc;
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+
+    .content {
+        width: 80%;
+        top: 4%;
+        left: 15%;
+        position: absolute;
+
+        .chinese-name {
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+        .english-name {
+            margin-bottom: 20px;
+        }
+        .guest-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 7%;
+
+            .guest-item {
+                width: 20%;
+                height: 100%;
+                position: relative;
+
+                img {
+                    height: 14rem;
+                    width: 90%;
+                }
+                .name-text {
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #fff;
+                    opacity: 0.7;
+                    padding: 3px 10px 10px 10px;
+                    height: 4.7rem;
+                    width: 90%;
+                }
+                .name-text div:first-child {
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                }
+                .name-text div:last-child {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        .btn-div {
+            margin-top: 5%;
+        }
+        .btn {
+            background-color: #77464e;
+            color: #fff;
+            cursor: pointer;
+            width: 120px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+            border: 0px;
+            border-radius: 15px;
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+.meetLine {
+    position: absolute;
+    top: 23%;
+    left: 5%;
+    color: #fff;
+
+    .driver-v {
+        width: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    // 竖线
+    .driver {
+        background-color: #fff;
+        height: 30px;
+        width: 2px;
+    }
+
+    .group {
+        display: flex;
+        align-items: center;
+
+        .vertical-item {
+            width: 15px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            // 圆
+            .round {
+                background-color: #fff;
+                height: 16px;
+                width: 8px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            
+            // 自适应高度竖线
+            .driver-short {
+                background-color: #fff;
+                height: 100%;
+                width: 2px;
+            }
+        }
+        
+    }
+    .name {
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+    #current-round {
+        background-color: #fff;
+        height: 33px;
+        width: 11px;
+        border-radius: 50%;
+    }
+    #current-name {
+        font-size: 1rem;
+    }
+}
+#color {
+    color: black;
+}

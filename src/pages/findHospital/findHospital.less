@@ -1,0 +1,244 @@
+@import '../../static/css/common.less';
+
+.findHospital {
+
+    .index {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        padding: 4rem 200px;
+        margin-top: 20px;
+
+        // 标签页下边框隐藏
+        .ant-tabs-nav-container {
+            border: 1px solid #fff;
+        }
+
+        // 标签页靠左
+        .ant-tabs-nav-scroll {
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        // 更改标签背景色
+        // .ant-tabs-tab-active {
+        //     color: black !important;
+        //     background-color: @link-color !important;
+        // }
+
+        .tab {
+            font-size: 1rem;
+
+            .filter {
+
+                .category{
+                    overflow: hidden;
+
+                    .name {
+                        float: left;
+                        height: 4rem;
+                    }
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            float: left;
+                            padding: 0 2.35%;
+                            cursor: pointer;
+                        }
+                        .current {
+                            color: #fff;
+                            background-color: @link-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .driver {
+            margin: 3rem 0;
+        }
+
+        // 相关
+        .related {
+            display: flex;
+            justify-content: space-between;
+            
+            // 相关医院
+            .related-hospital {
+                width: 75%;
+
+                .item {
+                    border: 1px solid @border-color;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 10px;
+                    height: 210px;
+
+                    .item-left {
+                        display: flex;
+                        width: 100%;
+
+                        img {
+                            width: 25%;
+                            border-radius: 3px;
+                            margin-right: 10px;
+                        }
+                        
+                        // 医院图片右侧文字
+                        .hospital-name {
+
+                            .text-1 {
+                                display: flex;
+
+                                .span {
+                                    margin-left: 15px;
+                                }
+                                
+                                span {
+                                    color: @link-color;
+                                    border: 1px solid @link-color;
+                                    padding: 1px 8px;
+                                    font-size: 12px;
+                                    border-radius: 32%;
+                                    margin-left: 0.5px;
+                                }
+                            }
+
+                            .text-2 {
+                                font-size: 12px;
+                                margin: 2% 0;
+
+                                .rate {
+                                    font-size: 15px;
+                                }
+                            }
+                            // 症状
+                            .symptom {
+                                span {
+                                    border: 1px solid @link-color;
+                                    color: @link-color;
+                                    border-radius: 3px;
+                                    font-size: 12px;
+                                    padding: 1px 8px;
+                                    margin-right: 10px;
+                                }
+                            }
+                            // 图文
+                            .frame {
+                                position: relative;
+                                font-size: 14px;
+                                margin-top: 18px;
+
+                                span {
+                                    position: absolute;
+                                    color: #fff;
+                                }
+                                .frame-1 {
+                                    left: 8%;
+                                    top: 20%;
+                                }
+                                .frame-2 {
+                                    left: 36%;
+                                    top: 20%;
+                                }
+                                .frame-3 {
+                                    left: 64%;
+                                    top: 20%;
+                                }
+                            }
+                        }
+                    }
+                    // 综合评分
+                    .item-right {
+                        border: 1px solid @border-color;
+                        width: 21%;
+                        height: 100%;
+                        padding: 5px 10px;
+                        color: black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+
+                        .overall-rating {
+                            font-size: 14px;
+                        }
+                        .overall-rating-no {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                // 分页
+                .pagination {
+                    border: 1px solid @border-color;
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            // 相关医生
+            .related-doctor {
+                width: 18%;
+
+                .doctor-list {
+                    border: 1px solid @border-color;
+
+                    .doctor-item {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 10px;
+
+                        .doctor-item-content {
+                            display: flex;
+                            padding: 10px 5px;
+                            
+                        }
+
+                        img {
+                            width: 30%;
+                            height: 100%;
+                            border-radius: 50%;
+                            margin-right: 17px;
+                        }
+                        .introduce {
+                            font-size: 12px;
+
+                            .introduce-1 {
+
+                                .span1 {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    margin-right: 8px;
+                                    cursor: pointer;
+                                }
+                                .span2 {
+                                    font-size: 14px;
+                                }
+                            }
+                            .introduce-2 {
+                                height: 40px;
+                            }
+                            .make-appointment {
+                                border: 1px solid @link-color;
+                                text-align: center;
+                                color: black;
+                                width: 60%;
+                                border-radius: 5px;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

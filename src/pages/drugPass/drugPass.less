@@ -1,0 +1,370 @@
+@import '../../static/css/common.less';
+
+.drug-pass {
+
+    .index {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content{
+        padding: 20px 200px;
+
+        h2 {
+            margin-top: 3rem;
+        }
+    }
+    .health-img {
+        display: flex;
+        justify-content: space-between;
+        
+        img {
+            background-size: 100% 100%;
+            height: 100%;
+            width: 20%;
+            cursor: pointer;
+        }
+    }
+
+    // 药品分类
+    .drug-classification {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1%;
+
+        .drug-left {
+            width: 20%;
+
+            .classification-item {
+                background-color: rgb(250, 248, 248);
+                // width: 230px;
+                height: 45px;
+                line-height: 38px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border: 1px solid rgb(201, 194, 194);
+                cursor: pointer;
+
+                .line {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 13%;
+
+                    svg {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .classification-item:hover {
+                border: 1px solid rgb(16, 16, 226);
+            }
+        }
+
+        .drug-right {
+            width: 77%;
+            margin-left: 3%;
+            border: 1px solid rgb(201, 194, 194);
+
+            .detail {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                // border: 1px solid red;
+                background-color: rgb(250, 248, 248);
+                height: 45px;
+                
+                .name {
+                    width: 150px;
+                    margin-left: 20px;
+                }
+
+                .classification {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    // border-top: 1px solid rgb(201, 194, 194);
+                    border-bottom: 1px solid rgb(201, 194, 194);
+
+                    a {
+                        color: #a09b9b;
+                    }
+                    a:hover {
+                        color: @link-color;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// 详情
+.details {
+    padding: 35px 250px;
+
+    .categories {
+        height: 210px;
+        width: 100%;
+        border: 1px solid @border-color;
+        margin-top: 20px;
+        font-size: 15px;
+
+        .commodity-no {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            border-bottom: 1px solid @border-color;
+            height: 50px;
+
+            span {
+                color: @link-color;
+            }
+        }
+
+        .disease {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            padding: 0 40px;
+
+            .disease-name {
+                float: left;
+                color: @font-color;
+            }
+            .li-more {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 95%;
+            }
+            .current {
+                color: #fff;
+                background-color: @link-color;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            // 取消ul和ol符号以及padding和margin
+            ul, ol {
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            ul li {
+                float: left;
+                padding: 0 10px;
+                list-style: none;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            ul li:hover {
+                background-color: @link-color;
+                color: #fff;
+            }
+            .disease-more {
+                color: @link-color;
+                cursor: pointer;
+            }
+        }
+
+        // 去掉分割线默认外边距
+        .ant-divider-dashed {
+            margin: 0;
+        }
+        .divider {
+            padding: 0 22px;
+        }
+    }
+
+    .content {
+        font-size: 15px;
+        margin-top: 2rem;
+
+        .line-detail {
+            height: 217px;
+            border: 1px solid @border-color;
+        }
+
+        .card-header {
+            height: 50px;
+            background-color: @border-color;
+            padding-left: 20px;
+            border-top: 1px solid #d6d3d3;
+            border-bottom: 1px solid #d6d3d3;
+
+            span {
+                color: @link-color;
+                line-height: 50px;
+                margin-right: 10px;
+            }
+        }
+        .img-describe {
+            display: flex;
+            flex-direction: row;
+            padding: 10px 40px;
+            align-items: center;
+            height: calc(100% - 50px);
+
+            img {
+                height: 138px;
+                height: 138px;
+                border: 1px solid @border-color;
+            }
+            .describe {
+                display: flex;
+                align-items: center;
+                width: 60%;
+                margin-left: 20px;
+
+                .describe-div {
+                    display: flex;
+                }
+
+                .describe1 {
+                    width: 10%;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+
+// 男性健康
+.menHealth {
+    padding: 20px;
+    border: 1px solid @border-color;
+    // width: 75%;
+    margin: 0 14rem;
+
+    .introduce-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .content-left {
+            border-bottom: 1px solid @border-color;
+
+            // 更改分割线默认外边距
+            .ant-divider-horizontal {
+                margin: 50px 0 40px 0;
+             }
+        }
+        .content-center {
+            width: 40%;
+            background-size: 100% 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            .center-nourishes-text {
+                width: 100%;
+                text-align: center;
+                padding: 0 15px;
+                position: absolute;
+                width: 80%;
+                bottom: 12%;
+                padding: 0px 35px;
+
+                .text-bold {
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+                .text-2 {
+                    text-align: center;
+                    font-size: 20px
+                }
+                // 更改分割线默认外边距
+                .ant-divider-horizontal {
+                   margin: 15px 0;
+                }
+            }
+        }
+        .content-right {
+            border-bottom: 1px solid @border-color;
+            // width: 40%;
+
+            .right-nourishes {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+
+                .right-nourishes-text {
+                    // margin-right: 20px;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 15px;
+
+                    .text-bold {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                    .text-2 {
+                        text-align: center;
+                    }
+
+    
+                    // 更改分割线默认外边距
+                    .ant-divider-horizontal {
+                       margin: 15px 0;
+                    }
+                }
+            }
+
+            .zuoguiMaru-img {
+                text-align: center;
+                
+                img {
+                    width: 120px;
+                    height: 110px;
+                    border: 1px solid @border-color;
+                }
+            }
+        }
+    }
+
+    // 症状
+    .symptom {
+        margin-top: 3%;
+        padding: 2% 0;
+        border: 1px solid @border-color;
+
+        ul {
+            // display: flex;
+            // justify-content: space-around;
+            overflow: hidden;
+        }
+
+        ul li {
+            list-style: none;
+            text-decoration: none;
+            float: left;
+            width: 33.3333%;
+            padding: 0.5% 53px;
+            font-size: 0.8rem;
+        }
+        ul li span {
+            color: @link-color;
+            cursor: pointer;
+        }
+
+         // 取消ul和ol符号以及padding和margin
+         ul, ol {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul li:nth-child(3n+1){
+            clear:both
+        }
+    }
+
+}

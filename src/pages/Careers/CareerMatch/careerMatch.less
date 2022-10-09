@@ -1,0 +1,77 @@
+@import '../../../static/css/common.less';
+
+.careerMatch {
+
+    .careerMatch-index {
+        width: 100%;
+    }
+    // 团队
+    .team {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: @page-padding;
+
+        .team-left {
+            width: 70%;
+            font-size: 1rem;
+            margin: 2rem 0;
+        }
+
+        img {
+            width: 15%;
+            height: 100%;
+        }
+    }
+
+    // 找工作
+    .find-job {
+        background-color: #d9eaff;
+        padding: 20px 200px 3rem 200px;
+
+        .find {
+            margin: 1.7rem 0;
+            font-size: 1rem;
+        }
+
+        .recruitment {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            div {
+                width: 100%;
+                margin: 0 10px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .recruitment-item {
+                position: relative;
+
+                .post {
+                    position: absolute;
+                    bottom: 5%;
+                    left: 10%;
+                    width: 80%;
+
+                    .position-title {
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                    }
+
+                    .btn {
+                        float: right;
+                        color: #fff;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
